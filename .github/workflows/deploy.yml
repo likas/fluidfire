@@ -18,7 +18,7 @@ jobs:
 
       # 2. Run the ready-made converter from the GitHub Marketplace
       - name: Convert MD to HTML
-        uses: jaimevalme/markdown-to-html-with-github-style@v1.0.1
+        uses: KrauseFx/markdown-to-html-with-github-style@v1.0.1
         with:
           input_file: "README.md"
           output_file: "index.html"
