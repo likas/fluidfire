@@ -17,12 +17,11 @@ jobs:
         uses: actions/checkout@v4
 
       # 2. Run the ready-made converter from the GitHub Marketplace
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
       - name: Convert MD to HTML
-        uses: KrauseFx/markdown-to-html-with-github-style@v1.0.1
-        with:
-          input_file: "README.md"
-          output_file: "index.html"
-          template_file: "template.html"
+        run: |
+          pandoc README.md -f markdown -t html --template=template.html -o index
 
       # 3. Deploy the generated index.html to GitHub Pages
       - name: Deploy to GitHub Pages
