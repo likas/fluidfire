@@ -1,0 +1,32 @@
+name: Convert Markdown to HTML and Deploy
+
+on:
+  push:
+    branches:
+      - main # The script will run when you push to the main branch
+
+permissions:
+  contents: write # Allow the bot to write the generated HTML back to the repository
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the code from your repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Run the ready-made converter from the GitHub Marketplace
+      - name: Convert MD to HTML
+        uses: jaimevalme/markdown-to-html-with-github-style@v1.0.1
+        with:
+          input_file: "README.md"
+          output_file: "index.html"
+          template_file: "template.html"
+
+      # 3. Deploy the generated index.html to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # Allow the bot to write the generated HTML back to the repository
+          branch: gh-pages # The bot will create this branch and put the index.html file there
