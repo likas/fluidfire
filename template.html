@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV FluidFire</title>
-    <!-- Styles for GitHub-like appearance -->
+    <title>FluidFire's CV</title>
+    <!-- GitHub Markdown CSS theme -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+        /* Base page layout rules */
+        body { box-sizing: border-box; min-width: 200px; max-width: 1200px; margin: 0 auto; padding: 45px; }
         @media (max-width: 767px) { body { padding: 15px; } }
+
+        /* Container using CSS Flexbox for columns */
+        .columns-container {
+            display: flex;
+            gap: 40px; /* Space between columns */
+        }
+
+        /* Left column (Contacts) - takes 30% of space */
+        .left-column {
+            flex: 3;
+            min-width: 250px;
+        }
+
+        /* Right column (Main Content) - takes 70% of space */
+        .right-column {
+            flex: 7;
+        }
+
+        /* Responsive design: stack columns vertically on mobile screens */
+        @media (max-width: 768px) {
+            .columns-container { flex-direction: column; gap: 20px; }
+        }
     </style>
 </head>
-<body class="markdown-body">
-    <!-- MD will go here -->
-    $body$
+<body>
+
+    <div class="columns-container">
+        <!-- Left column using GitHub styling -->
+        <div class="left-column markdown-body">
+            $contacts$
+        </div>
+
+        <!-- Right column using GitHub styling -->
+        <div class="right-column markdown-body">
+            $main$
+        </div>
+    </div>
+
 </body>
 </html>
