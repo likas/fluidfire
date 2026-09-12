@@ -1,170 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FluidFire's CV</title>
-    <!-- GitHub Markdown CSS theme -->
+    <title>CV FluidFire</title>
+    <!-- Styles for GitHub-like appearance -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        /* Base page layout rules */
-        body { box-sizing: border-box; min-width: 200px; max-width: 1200px; margin: 0 auto; padding: 45px; }
+        body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
         @media (max-width: 767px) { body { padding: 15px; } }
-
-        /* Container using CSS Flexbox for columns */
-        .columns-container {
-            display: flex;
-            gap: 40px; /* Space between columns */
-        }
-
-        /* Left column (Contacts) - takes 30% of space */
-        .left-column {
-            flex: 3;
-            min-width: 250px;
-        }
-
-        /* Right column (Main Content) - takes 70% of space */
-        .right-column {
-            flex: 7;
-        }
-
-        /* Responsive design: stack columns vertically on mobile screens */
-        @media (max-width: 768px) {
-            .columns-container { flex-direction: column; gap: 20px; }
-        }
     </style>
 </head>
-<body>
-
-    <div class="columns-container">
-        <!-- Left column using GitHub styling -->
-        <div class="left-column markdown-body">
-            <h2 id="контакты">Контакты</h2>
-            <ul>
-            <li><strong>Email:</strong> <a
-            href="mailto:liliya.cheremnykh@gmail.com">liliya.cheremnykh@gmail.com</a></li>
-            <li><strong>Локация:</strong> Россия, Новосибирск</li>
-            <li><strong>LinkedIn:</strong> <a
-            href="http://www.linkedin.com/in/liliya-cheremnykh-b30047319">http://www.linkedin.com/in/liliya-cheremnykh-b30047319</a></li>
-            <li><strong>GitHub:</strong> <a
-            href="https://github.com/likas">github.com/likas</a></li>
-            <li><strong>Telegram:</strong> <a href="https://t.me/fluidfire"><span
-            class="citation" data-cites="fluidfire">@fluidfire</span></a></li>
-            </ul>
-            <h2 id="навыки">Навыки</h2>
-            <ul>
-            <li><strong>Языки:</strong> C++, Blueprints, Python</li>
-            </ul>
-            <h2 id="языки">Языки</h2>
-            <ul>
-            <li>Русский — Родной</li>
-            <li>Английский — B2 (Upper-Intermediate)</li>
-            </ul>
-        </div>
-
-        <!-- Right column using GitHub styling -->
-        <div class="right-column markdown-body">
-            <h1 id="лилия-черемных">Лилия Черемных</h1>
-            <p><strong>Unreal Engine Developer</strong><br />
-            <strong>Общий опыт:</strong> 5 лет</p>
-            <h2 id="обо-мне">Обо мне</h2>
-            <p>Знакома с VR-гарнитурами: Oculus Quest 1/2/3, Oculus Rift, HTC Vive
-            Pro, QIYI Dream Pro, YVR Dream.</p>
-            <p>Участие в гейм джемах: SGJ Ноябрь 2023, 2024, 2025 (с командой) SGJ
-            Май 2024 (в одиночку)</p>
-            <p>Игры смотреть тут: https://fluidfire.itch.io/ Майская игра, исходники
-            (blueprints-only): https://github.com/likas/SpaceEmergency</p>
-            <p>VCS: Git + lfs, Perforce</p>
-            <p>Таск-трекеры: Jira, Asana, YouTrack</p>
-            <h2 id="опыт-работы">Опыт работы</h2>
-            <h3 id="unreal-engine-developer">Unreal Engine Developer</h3>
-            <p><em>ICVR LLC | Август 2024 – Август 2026</em></p>
-            <p>Работа над несколькими проектами, в том числе: проект по процедурной
-            генерации плана застройки, иммерсивный VR-опыт, продукт для упрощения
-            пайплайна работы с анимациями, расширение редактора для анализа
-            секвенций.</p>
-            <p>Стек: UE/C++, Python</p>
-            <p>Проекты:</p>
-            <ol type="1">
-            <li>Прототип в UE5 для генерации и визуализации плана в соответствии с
-            заданными пользователем ограничениями</li>
-            </ol>
-            <p>Задачи:</p>
-            <ul>
-            <li>Улучшение и модификация алгоритма генерации</li>
-            <li>Реализация функций взаимодействия UE части с кастомным API
-            бэкенда</li>
-            <li>Создание презентационных видео для клиента</li>
-            </ul>
-            <ol start="2" type="1">
-            <li>Техническая часть для иммерсивного VR опыта, предназначенная для
-            использования внешней командой ГД</li>
-            </ol>
-            <p>Задачи:</p>
-            <ul>
-            <li>Совмещение Oculus плагина для трекинга с запуском кастомных
-            анимаций</li>
-            <li>Разработка системы для контроля доступных игроку взаимодействий</li>
-            <li>Имплементация взаимодействия с UI в VR</li>
-            <li>Сборка демо-сцен для демонстрации функционала</li>
-            <li>Консультирование по вопросам реализации VR-специфичных механик</li>
-            </ul>
-            <ol start="3" type="1">
-            <li>Набор инструментов для упрощения пайплайна создания моделей,
-            анимации, секвенций в основных инструментах для DCC (Digital Content
-            Creation)</li>
-            </ol>
-            <ul>
-            <li>Разработка функционала плагинов для DCC: UE, Maya, Blender,
-            Substance</li>
-            <li>Дизайн и реализация инструмента импорта риг сцен в Maya в
-            соответствии с требованиями на нужном этапе пайплайна</li>
-            <li>Исправление ошибок, поддержание функциональности в core модулях
-            проекта</li>
-            </ul>
-            <ol start="4" type="1">
-            <li>Разработка инструмента анализа видимости мешей и занимаемого ими
-            пространства на экране в секвенциях (Level Sequence)</li>
-            </ol>
-            <ul>
-            <li>Покадровый анализ Level Sequence для определения
-            видимости/пространства, документирование имплементаци</li>
-            </ul>
-            <h3 id="программист-ue4">Программист UE4</h3>
-            <p><em>GeekyHouse | Мой 2022 – Июнь 2023</em></p>
-            <p>Игра в Steam:
-            https://store.steampowered.com/app/1431430/Tiny_Island/</p>
-            <p>Разработка, портирование (Oculus Quest) и оптимизация игры Tiny
-            Island. Задачи разработки (примеры): * Система назначения NPC на
-            “работу” в игровых зданиях (логика NPC использует BehaviourTree); *
-            Система предотвращения потери игровых объектов вследствие помещения их
-            игроком внутрь мешей, образующих ландшафт; * Система выдачи динамических
-            квестов; * Иллюзия светового луча и его преломления линзами (квестовая
-            механика); * Написание логики работы для различных сюжетных квестов.
-            Задачи оптимизации: * Уложиться в бюджет 16,6 мс на кадр (60 FPS) для
-            мобильной версии (Oculus Quest 2) для публикации в AppLab. * В связи с
-            вышеописанным: работа с UnrealProfiler, RenderDoc (Meta Fork), Perfetto.
-            Задачи портирования: * Работа с Oculus Fork - форком Unreal Engine от
-            Meta - с целью опробовать применение технологии оптимизации Oculus
-            SpaceWarp; * Поддержка работоспособности игры и используемых игрой
-            плагинов (DevToDev, BugSplat, FMOD) на VR-шлемах с OS Android (Oculus
-            Quest 1/2, QIYI Dream Pro, YVR Dream).</p>
-            <h3 id="программист-ue4-1">Программист UE4</h3>
-            <p><em>BrainyMX | Апрель 2020 – Май 2022</em></p>
-            <p>Работа над несколькими прототипами VR-игр: сингловыми и
-            мультиплеерными. Разработка мобильной обучающей игры. Поддержка
-            существующих проектов. Разработка игры для VR-арены (LBE): командный
-            мультиплеерный шутер на площадке для нескольких игроков. Работа над
-            реализацией собственно мультиплеерности; реализация настройки положения
-            игрока на арене, настройка связи анимации модели с действиями игрока.
-            Реализация логики игровой сессии, в том числе спаун/респаун игроков,
-            разбитие сессии на раунды, подведение итогов раунда и итогов игры.</p>
-            <h2 id="образование">Образование</h2>
-            <h3 id="магистр-информатики-и-вычислительной-техники">Магистр
-            информатики и вычислительной техники</h3>
-            <p><em>СибГУТИ | 2015 – 2017</em></p>
-        </div>
-    </div>
-
+<body class="markdown-body">
+    <!-- MD will go here -->
+    
 </body>
 </html>

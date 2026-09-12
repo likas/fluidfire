@@ -1,0 +1,163 @@
+<style>
+  .cv-container {
+    display: flex;
+    gap: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  .cv-left {
+    flex: 1;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 30px;
+  }
+  .cv-right {
+    flex: 2.5;
+  }
+  h1 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  h2 {
+    color: #2980b9;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 25px;
+  }
+  h3 {
+    margin-bottom: 5px;
+    color: #34495e;
+  }
+  .contact-item {
+    margin-bottom: 12px;
+    font-size: 0.95em;
+  }
+  .contact-item strong {
+    display: block;
+    color: #555;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .useful-links {
+    margin-bottom: 12px;
+    font-size: 0.95em;
+  }
+  .useful-links strong {
+    display: block;
+    color: #555;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .company {
+    margin-bottom: 25px;
+  }
+  .period {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+</style>
+
+<div class="cv-container">
+  
+  <!-- ЛЕВАЯ КОЛОНКА: КОНТАКТЫ И НАВЫКИ -->
+  <div class="cv-left">
+    <h2>Контакты</h2>
+    <div class="contact-item">
+      <strong>Email</strong>
+      liliya.cheremnykh@gmail.com
+    </div>
+    <div class="contact-item">
+      <strong>Локация</strong>
+      Город, Страна
+    </div>
+    <div class="contact-item">
+      <strong>LinkedIn</strong>
+      http://www.linkedin.com/in/liliya-cheremnykh-b30047319
+    </div>
+    <div class="contact-item">
+      <strong>GitHub</strong>
+      https://github.com/likas
+    </div>
+    <div class="contact-item">
+      <strong>Telegram</strong>
+      @FluidFire
+    </div>
+    <h2>Навыки</h2>
+    <ul>
+      <li>Языки: C++, UE Blueprints, Python</li>
+      <li>VCS: git + lfs, Perforce</li>
+    </ul>
+    <h2>Языки</h2>
+    <ul>
+      <li>Русский — Родной</li>
+      <li>Английский — B2 (Upper-Intermediate)</li>
+    </ul>
+    <h2>Ссылки</h2>
+    <div class="useful-links">
+      <strong>Мои игры на Итче</strong>
+      https://fluidfire.itch.io/
+    </div>
+    <div class="useful-links">
+      <strong>Игра в Steam</strong>
+      https://store.steampowered.com/app/1431430/Tiny_Island/
+    </div>
+  </div>
+
+  <!-- ПРАВАЯ КОЛОНКА: ОСНОВНАЯ ИНФОРМАЦИЯ -->
+  <div class="cv-right">
+    <h1>Лилия Черемных</h1>
+    <h3 style="color: #7f8c8d; font-weight: normal; margin-top: 0;">Unreal Engine Developer</h3>
+    <p><strong>Общий опыт:</strong> 5 лет</p>
+    <h2>Обо мне</h2>
+    <p>
+      Большой опыт в геймплейном программировании, VR. Работала с мультиплеером в UE. Люблю решать задачи оптимизации, проектировать надёжные системы. Есть опыт с source-built движком (UE), пишу плагины и расширения редактора. В свободное время участвую в игровых джемах в составе команды или в одиночку.
+    </p>
+    <h2>Опыт работы</h2>
+    <div class="company">
+      <h3>Unreal Engine Developer</h3>
+      <div class="period">ICVR LLC | Август 2024 – Август 2026</div>
+      <ul>
+        <li>Работа над алгоритмом генерации для генератора вариантов застройки</li>
+        <li>Механики для интерактивного VR опыта</li>
+        <li>Поддержка и расширение функционала инструмента упрощения пайплайна</li>
+        <li>Разработка экспериментальных плагинов редактора</li>
+      </ul>
+    </div>
+    <div class="company">
+      <h3>Программист UE4</h3>
+      <div class="period">Geeky House | Мой 2022 – Июнь 2023</div>
+      <ul>
+        <li>Программирование основного геймплея - квестов, механик</li>
+        <li>Переработка и оптимизация core механик</li>
+        <li>Профилирование и оптимизация игры в целом - для Oculus Quest 1/2</li>
+        <li>Адаптация для VR-шлемов QIYI Dream Pro, YVR Dream</li>
+      </ul>
+    </div>
+    <div class="company">
+      <h3>Программист UE4</h3>
+      <div class="period">BrainyMX | Апрель 2020 – Май 2022</div>
+      <ul>
+        <li>Работа над несколькими прототипами VR-игр: сингловыми и мультиплеерными./li>
+        <li>Разработка мобильной обучающей игры.</li>
+        <li>Разработка игры для VR-арены (LBE): командный мультиплеерный шутер на площадке для нескольких игроков.</li>
+        <li>Поддержка существующих проектов AR на Unity</li>
+      </ul>
+    </div>
+    <h2>Образование</h2>
+    <div class="company">
+      <h3>Магистр информатики и вычислительной техники</h3>
+      <div class="period">Сибирский Государственный университет телекоммуникаций и информатики | 2015 – 2017</div>
+    </div>
+  </div>
+
+</div>
