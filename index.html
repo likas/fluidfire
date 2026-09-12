@@ -10,7 +10,20 @@ layout: null
 </head>
 <body>
       <style>
+        body {
+          margin: 0; /* Removes the browser's default 8px margin */
+          padding: 40px 20px; /* 40px top/bottom, 20px left/right */
+          background-color: #f4f6f8; /* A subtle off-white/gray background */
+        }
         .cv-container {
+          max-width: 1100px; /* Prevents it from stretching too wide on large monitors */
+          margin: 0 auto; /* Centers the container horizontally */
+          background-color: #ffffff; /* White background for the CV itself */
+          padding: 40px; /* Inner spacing inside the CV document */
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* A subtle shadow for depth */
+          border-radius: 8px; /* Slightly rounded corners */
+
+          /* Keep your original flexbox properties below */
           display: flex;
           gap: 40px;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -76,6 +89,21 @@ layout: null
         li {
           margin-bottom: 6px;
         }
+        @media (max-width: 768px) {
+        body {
+          padding: 20px 10px; /* Less padding on small screens */
+        }
+        .cv-container {
+          flex-direction: column; /* Stack columns vertically */
+          padding: 20px;
+        }
+        .cv-left {
+          border-right: none; /* Remove the vertical divider on mobile */
+          border-bottom: 2px solid #e0e0e0; /* Add a horizontal divider instead */
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+      }
       </style>
 
       <div class="cv-container">
