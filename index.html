@@ -104,7 +104,38 @@ layout: null
           padding-bottom: 20px;
         }
       }
-      </style>
+      /* --- Links --- */
+      a {
+        color: #2980b9; /* Matches your h2 headers */
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s ease, border-color 0.2s ease;
+      }
+
+      a:hover {
+        color: #1a5276; /* Darker blue on hover */
+        border-bottom: 1px solid #1a5276; /* Subtle underline slides in */
+      }
+
+      a:visited {
+        color: #2980b9; /* Prevents the ugly purple visited color */
+      }
+
+      a:focus-visible {
+        outline: 2px solid #2980b9;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+      .contact-item a {
+        color: #34495e; /* Darker, more subtle — matches your h3 color */
+        font-weight: 500;
+      }
+
+      .contact-item a:hover {
+        color: #2980b9; /* Lights up to blue on hover */
+        border-bottom-color: #2980b9;
+      }
+    </style>
 
       <div class="cv-container">
         
@@ -147,7 +178,7 @@ layout: null
             <a href="https://fluidfire.itch.io/" target="_blank" rel="noopener noreferrer">https://fluidfire.itch.io/</a>
           </div>
           <div class="useful-links">
-            <strong>Игра в Steam</strong>
+            <strong>Tiny Island в Steam</strong>
             <a href="https://store.steampowered.com/app/1431430/Tiny_Island/" target="_blank" rel="noopener noreferrer">https://store.steampowered.com/app/1431430/Tiny_Island/</a>
           </div>
         </div>
