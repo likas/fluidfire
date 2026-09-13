@@ -111,17 +111,23 @@ li {
 
     .cv-container {
         flex-direction: column;
-        /* Stack columns vertically */
         padding: 20px;
     }
 
+    /* Main content goes first */
+    .cv-right {
+        order: 1;
+    }
+
+    /* Contacts go second */
     .cv-left {
+        order: 2;
         border-right: none;
-        /* Remove the vertical divider on mobile */
-        border-bottom: 2px solid #e0e0e0;
-        /* Add a horizontal divider instead */
+        border-top: 2px solid #e0e0e0;
+        /* Top border instead of side */
         padding-right: 0;
-        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -166,84 +172,102 @@ a:focus-visible {
 
 /* --- PDF Download Button (Screen only) --- */
 .print-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #2980b9;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.2s ease;
-  z-index: 1000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+    z-index: 1000;
 }
 
 .print-btn:hover {
-  background-color: #1a5276;
+    background-color: #1a5276;
 }
 
 /* --- Print / PDF Optimization --- */
+
+/* 1. Define the physical paper size and margins */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+/* 2. Base Print Rules (Apply to both orientations) */
 @media print {
-  /* Hide the download button */
   .print-btn {
     display: none !important;
   }
-
-  /* Reset body and container backgrounds */
   body {
     background: white !important;
     padding: 0 !important;
     margin: 0 !important;
   }
-
   .cv-container {
     box-shadow: none !important;
     border-radius: 0 !important;
     margin: 0 !important;
-    padding: 0 !important; /* Let the @page margin handle the outer spacing */
-    
-    /* 2. FORCE the two-column layout */
-    display: flex !important;
-    flex-wrap: nowrap !important; /* Prevents columns from stacking */
-    width: 100% !important;
-    max-width: 100% !important;
+    padding: 0 !important;
   }
+  a {
+    color: #333 !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+  }
+  .company {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
 
-  /* 3. Lock the left column to exactly 30% of the page width */
+/* 3. PORTRAIT: Stack them, Main content first */
+@media print and (orientation: portrait) {
+  .cv-container {
+    flex-direction: column !important;
+  }
+  .cv-right {
+    order: 1 !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+  .cv-left {
+    order: 2 !important;
+    width: 100% !important;
+    border-right: none !important;
+    border-top: 2px solid #e0e0e0 !important;
+    padding-right: 0 !important;
+    padding-top: 15px !important;
+    margin-top: 15px !important;
+  }
+}
+
+/* 4. LANDSCAPE (Album): Side-by-side, 30/70 split */
+@media print and (orientation: landscape) {
+  .cv-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
   .cv-left {
     flex: 0 0 30% !important;
     width: 30% !important;
     border-right: 2px solid #e0e0e0 !important;
     padding-right: 15px !important;
   }
-
-  /* 4. Give the remaining 70% to the right column */
   .cv-right {
     flex: 1 !important;
     width: 70% !important;
     padding-left: 15px !important;
-  }
-
-  /* Ensure links look good in black-and-white printing */
-  a {
-    color: #333 !important;
-    text-decoration: underline !important;
-    border-bottom: none !important;
-  }
-
-  /* Prevent awkward page breaks inside company blocks */
-  .company {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* Force browsers to print background colors (if you have any) */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
   }
 }
