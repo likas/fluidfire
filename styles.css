@@ -163,3 +163,61 @@ a:focus-visible {
     /* Lights up to blue on hover */
     border-bottom-color: #2980b9;
 }
+
+/* --- PDF Download Button (Screen only) --- */
+.print-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+  z-index: 1000;
+}
+
+.print-btn:hover {
+  background-color: #1a5276;
+}
+
+/* --- Print / PDF Optimization --- */
+@media print {
+  /* 1. Hide the download button */
+  .print-btn {
+    display: none !important;
+  }
+
+  /* 2. Remove screen-only backgrounds and shadows */
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-container {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* 3. Ensure links look good in black-and-white printing */
+  a {
+    color: #333 !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+  }
+
+  /* 4. Prevent awkward page breaks inside company blocks */
+  .company {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
