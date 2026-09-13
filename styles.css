@@ -163,3 +163,87 @@ a:focus-visible {
     /* Lights up to blue on hover */
     border-bottom-color: #2980b9;
 }
+
+/* --- PDF Download Button (Screen only) --- */
+.print-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+  z-index: 1000;
+}
+
+.print-btn:hover {
+  background-color: #1a5276;
+}
+
+/* --- Print / PDF Optimization --- */
+@media print {
+  /* Hide the download button */
+  .print-btn {
+    display: none !important;
+  }
+
+  /* Reset body and container backgrounds */
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important; /* Let the @page margin handle the outer spacing */
+    
+    /* 2. FORCE the two-column layout */
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Prevents columns from stacking */
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 3. Lock the left column to exactly 30% of the page width */
+  .cv-left {
+    flex: 0 0 30% !important;
+    width: 30% !important;
+    border-right: 2px solid #e0e0e0 !important;
+    padding-right: 15px !important;
+  }
+
+  /* 4. Give the remaining 70% to the right column */
+  .cv-right {
+    flex: 1 !important;
+    width: 70% !important;
+    padding-left: 15px !important;
+  }
+
+  /* Ensure links look good in black-and-white printing */
+  a {
+    color: #333 !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+  }
+
+  /* Prevent awkward page breaks inside company blocks */
+  .company {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Force browsers to print background colors (if you have any) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

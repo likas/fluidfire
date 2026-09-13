@@ -12,7 +12,7 @@ layout: null
 </head>
 
 <body>
-  
+  <button id="download-pdf" class="print-btn">📄 Save as PDF</button>
   <div class="cv-container">
 
     <!-- ЛЕВАЯ КОЛОНКА: КОНТАКТЫ И НАВЫКИ -->
@@ -113,6 +113,11 @@ layout: null
     </div>
 
   </div>
+  <script>
+    document.getElementById('download-pdf').addEventListener('click', function() {
+      window.print();
+    });
+  </script>
 
 </body>
 
