@@ -41,9 +41,16 @@ layout: null
         <a href="https://t.me/FluidFire" target="_blank" rel="noopener noreferrer">@FluidFire</a>
       </div>
       <h2>Навыки</h2>
-      <ul>
-        <li>Языки: C++, UE Blueprints, Python</li>
-        <li>VCS: git + lfs, Perforce</li>
+      <ul class="skills-list">
+        <li><strong>Языки:</strong> C++, Python, UE Blueprints</li>
+        <li><strong>Движок:</strong> Unreal Engine 4/5 (включая сборку из исходников), Editor Scripting, Editor Utility
+          Widgets, UMG, AnimBlueprint, Behavior Trees</li>
+        <li><strong>VR:</strong> Oculus SDK, OpenXR, VRExpansionPlugin, Oculus Quest 1/2/3</li>
+        <li><strong>Сеть:</strong> Replication, RPC, client-server архитектура</li>
+        <li><strong>Профилирование и оптимизация:</strong> Unreal Insights, RenderDoc, Perfetto</li>
+        <li><strong>DCC:</strong> разработка плагинов для Maya, Blender, Substance</li>
+        <li><strong>VCS / OS:</strong> Git + LFS, Perforce, Linux</li>
+        <li><strong>Инструменты:</strong> AI-assisted development (Claude)</li>
       </ul>
       <h2>Языки</h2>
       <ul>
@@ -76,34 +83,118 @@ layout: null
       <h2>Опыт работы</h2>
       <div class="company">
         <h3>Unreal Engine Developer</h3>
-        <div class="period">ICVR LLC | Август 2024 – Август 2026</div>
+        <div class="period">ICVR | Август 2024 – Август 2026</div>
+        <p><em>Акцент: Tools Programming, Procedural Algorithms, Editor Extensions</em></p>
+
+        <p>Разработка алгоритмов процедурной генерации, инструментов для DCC-пайплайна и системы для иммерсивного
+          VR-опыта.</p>
+
+        <h4>Процедурная генерация и инструменты пайплайна</h4>
         <ul>
-          <li>Работа над алгоритмом генерации для генератора вариантов застройки</li>
-          <li>Механики для интерактивного VR опыта</li>
-          <li>Поддержка и расширение функционала инструмента упрощения пайплайна</li>
-          <li>Разработка экспериментальных плагинов редактора</li>
-        </ul>
-      </div>
-      <div class="company">
-        <h3>Программист UE4</h3>
-        <div class="period">Geeky House | Мой 2022 – Июнь 2023</div>
-        <ul>
-          <li>Программирование основного геймплея - квестов, механик</li>
-          <li>Переработка и оптимизация core механик</li>
-          <li>Профилирование и оптимизация игры в целом - для Oculus Quest 1/2</li>
-          <li>Адаптация для VR-шлемов QIYI Dream Pro, YVR Dream</li>
-        </ul>
-      </div>
-      <div class="company">
-        <h3>Программист UE4</h3>
-        <div class="period">BrainyMX | Апрель 2020 – Май 2022</div>
-        <ul>
-          <li>Работа над несколькими прототипами VR-игр: сингловыми и мультиплеерными.</li>
-          <li>Разработка мобильной обучающей игры.</li>
-          <li>Разработка игры для VR-арены (LBE): командный мультиплеерный шутер на площадке для нескольких игроков.
+          <li>Дорабатывала алгоритм размещения объектов застройки: оптимизация логики и адаптация под изменяющиеся
+            требования проекта.</li>
+          <li>Реализовала интеграцию с кастомным бэкенд-API для обмена данными по генерации.</li>
+          <li>Разрабатывала плагины для инструментов DCC-пайплайна (UE, Maya, Blender, Substance) по запросам клиентов.
           </li>
-          <li>Поддержка существующих проектов AR на Unity</li>
+          <li>Спроектировала инструмент импорта риг сцен в Maya.</li>
+          <li>Разработала прототип инструмента для анализа Level Sequences: покадровый анализ видимости мешей для
+            приоритизации задач 3D-художникам.</li>
         </ul>
+
+        <h4>Иммерсивный VR-опыт</h4>
+        <ul>
+          <li>Настроила AnimBlueprint для совмещения Oculus-трекинга с кастомными анимациями.</li>
+          <li>Разработала систему контроля взаимодействий для управления вниманием игрока (отключение перемещения,
+            хватания, 6DoF в зависимости от сценария).</li>
+          <li>Система использовалась внешними гейм-дизайнерами для настройки сценариев.</li>
+        </ul>
+
+        <p><strong>Стек:</strong> UE5, C++, Python, Editor Scripting, Editor Utility Widgets, Perforce</p>
+      </div>
+      <div class="company">
+        <h3>UE4 Programmer</h3>
+        <div class="period">GeekyHouse | Май 2022 – Июнь 2023</div>
+        <p><em>Акцент: Shipped Title, VR Optimization, Porting, Performance Profiling</em></p>
+
+        <h4>Tiny Island — разработка, портирование и оптимизация игры для Oculus Quest 1/2</h4>
+        <ul>
+          <li><strong>Релиз в Steam:</strong> <a href="https://store.steampowered.com/app/1431430/Tiny_Island/"
+              target="_blank">store.steampowered.com/app/1431430</a></li>
+          <li><strong>Релиз в AppLab:</strong> успешное прохождение сертификации (бюджет кадра ≤ 16.6 мс).</li>
+        </ul>
+
+        <h4>Геймплейные системы</h4>
+        <ul>
+          <li>Система назначения NPC на "работу" в зданиях (логика на базе <strong>Behavior Trees</strong>).</li>
+          <li>Динамическая система квестов с процедурной генерацией задач.</li>
+          <li>Реализация квестовой механики преломления света: спавн меша "луча" и расчет его направления по законам
+            геометрической оптики.</li>
+          <li>Защита от "застревания" квестовых предметов в ландшафте: система предотвращала помещение объектов внутрь
+            мешей, блокирующих прогресс квеста.</li>
+        </ul>
+
+        <h4>Оптимизация под Oculus Quest 2 (Standalone VR)</h4>
+        <ul>
+          <li><strong>Оптимизация меша воды:</strong> нестандартная настройка геометрии (больше треугольников вблизи,
+            меньше и
+            больших размеров вдали), что позволило снизить нагрузку без потери визуального качества.</li>
+          <li><strong>Оптимизация физики и коллизий:</strong> переписали движение объектов с коллизией на C++, уменьшили
+            количество объектов с коллизией, отключали физику для объектов на расстоянии.</li>
+          <li><strong>Оптимизация рендера:</strong> перевод мешей на инстансы, включение <strong>software occlusion
+              culling</strong> (лучшие результаты на Quest), настройка LOD-пайплайна.</li>
+          <li>Профилирование с помощью <code>Unreal Insights</code>, <code>RenderDoc (Meta Fork)</code>,
+            <code>Perfetto</code>.
+          </li>
+        </ul>
+
+        <h4>Портирование</h4>
+        <ul>
+          <li>Интеграция <strong>Oculus SpaceWarp</strong> (Oculus Fork UE) для ASW и повышения плавности.</li>
+          <li>Поддержка работоспособности игры и плагинов (DevToDev, BugSplat, FMOD) на VR-шлемах с OS Android: Oculus
+            Quest 1/2, QIYI Dream Pro, YVR Dream.</li>
+        </ul>
+
+        <p><strong>Стек:</strong> UE4, C++, Blueprints, Behavior Trees, UMG, OpenXR, Unreal Insights, RenderDoc,
+          Perfetto, Oculus SDK</p>
+      </div>
+      <div class="company">
+        <h3>Lead UE4 Programmer (Team of 2)</h3>
+        <div class="period">BrainyMX | Апрель 2020 – Май 2022</div>
+        <p><em>Акцент: VR Multiplayer, LBE Arena, Leadership</em></p>
+
+        <p>Возглавляла разработку проектов в микро-команде из 2 человек. Отвечала за архитектуру геймплея, найм и
+          менторинг.</p>
+
+        <h4>LBE VR Arena — командный мультиплеерный шутер (до 8 игроков)</h4>
+        <ul>
+          <li>Настроила сетевое взаимодействие и репликацию движения игроков с использованием
+            <strong>VRExpansionPlugin</strong>.
+          </li>
+          <li>Реализовала вызовы действий игроков через <code>Server/Client RPC</code>.</li>
+          <li>Написала логику игровых сессий: переход между раундами, спавн/респавн игроков, подсчет итогов матча.</li>
+          <li>Реализовала калибровку позиций игроков в физическом помещении: установка контроллера в заданную точку для
+            корректного определения пола и позиции шлема.</li>
+        </ul>
+
+        <h4>Мобильная обучающая игра (Unreal)</h4>
+        <ul>
+          <li>Разработала обучающую игру для мобильных устройств с использованием <strong>UMG (Unreal Motion
+              Graphics)</strong> для интерфейса и логики прогресса пользователя.</li>
+        </ul>
+
+        <h4>Управление и найм</h4>
+        <ul>
+          <li>Провела собеседование и <strong>наняла второго разработчика</strong> (Junior), распределяла задачи и
+            проводила code-review.</li>
+        </ul>
+
+        <h4>Прочие проекты</h4>
+        <ul>
+          <li>Разработка сингловых и мультиплеерных VR-прототипов.</li>
+          <li>Поддержка существующих AR-проектов на Unity.</li>
+        </ul>
+
+        <p><strong>Стек:</strong> UE4, C++, VRExpansionPlugin, UMG, Replication, RPC, OpenXR, Unity (поддержка)</p>
       </div>
       <h2>Образование</h2>
       <div class="company">
