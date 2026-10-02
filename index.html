@@ -43,7 +43,7 @@ layout: null
       <h2>Навыки</h2>
       <ul class="skills-list">
         <li><strong>Языки:</strong> C++, Python, UE Blueprints</li>
-        <li><strong>Движок:</strong> Unreal Engine 4/5 (включая сборку из исходников), Editor Scripting, Editor Utility
+        <li><strong>Движок:</strong> Unreal Engine 4/5, Editor Scripting, Editor Utility
           Widgets, UMG, AnimBlueprint, Behavior Trees</li>
         <li><strong>VR:</strong> Oculus SDK, OpenXR, VRExpansionPlugin, Oculus Quest 1/2/3</li>
         <li><strong>Сеть:</strong> Replication, RPC, client-server архитектура</li>
@@ -75,15 +75,18 @@ layout: null
       <h3 style="color: #7f8c8d; font-weight: normal; margin-top: 0;">Unreal Engine Developer</h3>
       <p><strong>Общий опыт:</strong> 5 лет</p>
       <h2>Обо мне</h2>
-      <p>
-        Большой опыт в геймплейном программировании, VR. Работала с мультиплеером в UE. Люблю решать задачи оптимизации,
-        проектировать надёжные системы. Есть опыт с source-built движком (UE), пишу плагины и расширения редактора. В
-        свободное время участвую в игровых джемах в составе команды или в одиночку.
-      </p>
+      <p>Unreal Engine Developer с 5-летним опытом, специализация — VR-разработка и tools programming.</p>
+      <ul>
+        <li>Выпустила VR-игру <a href="https://store.steampowered.com/app/1431430/Tiny_Island/">Tiny Island</a> в Steam
+          и Oculus AppLab; отвечала за оптимизацию под Quest 2 (бюджет кадра ≤ 16.6 мс).</li>
+        <li>Работала над алгоритмами процедурной генерации и инструментами для DCC-пайплайна (UE, Maya, Blender, Substance).</li>
+        <li>Имею опыт найма и менторинга разработчиков в микро-команде.</li>
+        <li>Участвую в game jams в составе команды и соло.</li>
+      </ul>
       <h2>Опыт работы</h2>
       <div class="company">
         <h3>Unreal Engine Developer</h3>
-        <div class="period">ICVR | Август 2024 – Август 2026</div>
+        <div class="period">ICVR | Август 2024 – Август 2026 | Команда разработки: от 2 до 11 разработчиков</div>
         <p><em>Акцент: Tools Programming, Procedural Algorithms, Editor Extensions</em></p>
 
         <p>Разработка алгоритмов процедурной генерации, инструментов для DCC-пайплайна и системы для иммерсивного
@@ -113,7 +116,7 @@ layout: null
       </div>
       <div class="company">
         <h3>UE4 Programmer</h3>
-        <div class="period">GeekyHouse | Май 2022 – Июнь 2023</div>
+        <div class="period">GeekyHouse | Май 2022 – Июнь 2023 | Команда разработки: 3 разработчика</div>
         <p><em>Акцент: Shipped Title, VR Optimization, Porting, Performance Profiling</em></p>
 
         <h4>Tiny Island — разработка, портирование и оптимизация игры для Oculus Quest 1/2</h4>
@@ -125,33 +128,27 @@ layout: null
 
         <h4>Геймплейные системы</h4>
         <ul>
-          <li>Система назначения NPC на "работу" в зданиях (логика на базе <strong>Behavior Trees</strong>).</li>
-          <li>Динамическая система квестов с процедурной генерацией задач.</li>
-          <li>Реализация квестовой механики преломления света: спавн меша "луча" и расчет его направления по законам
-            геометрической оптики.</li>
-          <li>Защита от "застревания" квестовых предметов в ландшафте: система предотвращала помещение объектов внутрь
+          <li>Система назначения NPC на «работу» в зданиях на базе <strong>Behavior Trees</strong> + динамическая
+            генерация квестов.</li>
+          <li>Квестовая механика преломления света: спавн меша «луча» и расчёт его направления по законам геометрической
+            оптики.</li>
+          <li>Защита от «застревания» квестовых предметов в ландшафте: система предотвращала помещение объектов внутрь
             мешей, блокирующих прогресс квеста.</li>
         </ul>
 
         <h4>Оптимизация под Oculus Quest 2 (Standalone VR)</h4>
         <ul>
-          <li><strong>Оптимизация меша воды:</strong> нестандартная настройка геометрии (больше треугольников вблизи,
-            меньше и
-            больших размеров вдали), что позволило снизить нагрузку без потери визуального качества.</li>
-          <li><strong>Оптимизация физики и коллизий:</strong> переписали движение объектов с коллизией на C++, уменьшили
-            количество объектов с коллизией, отключали физику для объектов на расстоянии.</li>
-          <li><strong>Оптимизация рендера:</strong> перевод мешей на инстансы, включение <strong>software occlusion
-              culling</strong> (лучшие результаты на Quest), настройка LOD-пайплайна.</li>
-          <li>Профилирование с помощью <code>Unreal Insights</code>, <code>RenderDoc (Meta Fork)</code>,
-            <code>Perfetto</code>.
+          <li>Достигнут стабильный бюджет кадра ≤ 16.6 мс для прохождения сертификации в AppLab.</li>
+          <li>Вода: нестандартная настройка геометрии (больше треугольников вблизи, меньше и больших размеров вдали).
           </li>
+          <li>Физика и коллизии: переписывание на C++, сокращение числа коллизий, отключение физики на расстоянии.</li>
+          <li>Рендер: инстансинг мешей, <strong>software occlusion culling</strong>, настройка LOD-пайплайна.</li>
         </ul>
 
         <h4>Портирование</h4>
         <ul>
-          <li>Интеграция <strong>Oculus SpaceWarp</strong> (Oculus Fork UE) для ASW и повышения плавности.</li>
-          <li>Поддержка работоспособности игры и плагинов (DevToDev, BugSplat, FMOD) на VR-шлемах с OS Android: Oculus
-            Quest 1/2, QIYI Dream Pro, YVR Dream.</li>
+          <li>Адаптация под 5 устройств на Android (Quest 1/2, QIYI Dream Pro, YVR Dream) с поддержкой сторонних
+            плагинов (DevToDev, BugSplat, FMOD); интеграция <strong>Oculus SpaceWarp</strong>.</li>
         </ul>
 
         <p><strong>Стек:</strong> UE4, C++, Blueprints, Behavior Trees, UMG, OpenXR, Unreal Insights, RenderDoc,
@@ -159,7 +156,7 @@ layout: null
       </div>
       <div class="company">
         <h3>Lead UE4 Programmer (Team of 2)</h3>
-        <div class="period">BrainyMX | Апрель 2020 – Май 2022</div>
+        <div class="period">BrainyMX | Апрель 2020 – Май 2022 | Команда разработки: 2 разработчика</div>
         <p><em>Акцент: VR Multiplayer, LBE Arena, Leadership</em></p>
 
         <p>Возглавляла разработку проектов в микро-команде из 2 человек. Отвечала за архитектуру геймплея, найм и
@@ -196,6 +193,32 @@ layout: null
 
         <p><strong>Стек:</strong> UE4, C++, VRExpansionPlugin, UMG, Replication, RPC, OpenXR, Unity (поддержка)</p>
       </div>
+      <section>
+        <h2>Геймджемы</h2>
+        <div class="company">
+          <h3>Siberian Game Jam <span class="meta">(bi-annual)</span></h3>
+
+          <h4>Командные проекты (ноябрь 2023, 2024, 2025)</h4>
+          <ul>
+            <li>Игры на Unity, участие в составе команды.</li>
+            <li>Игровой цикл и система меню.</li>
+            <li>Менеджер музыки: переключение треков, проигрывание звуков.</li>
+            <li>Система эффектов карт на основе композиции: эффекты вынесены в отдельные классы и подключаются к карте
+              списком через редактор — геймдизайнеры правили баланс без правки кода (2025).</li>
+            <li>Победа в номинации «Лучшее попадание в тему» (2023).</li>
+          </ul>
+
+          <h4>Соло-проект (май 2024)</h4>
+          <ul>
+            <li>Собрала <strong>Unreal Engine 4.24 из исходников</strong> — единственная версия с поддержкой веб-сборки,
+              добавленной комьюнити.</li>
+            <li>Полный цикл разработки: архитектура, геймплей, оптимизация под веб.</li>
+            <li>Исходники: <a href="https://github.com/likas/SpaceEmergency">SpaceEmergency</a>.</li>
+          </ul>
+
+          <p>Игры: <a href="https://fluidfire.itch.io/">fluidfire.itch.io</a></p>
+        </div>
+      </section>
       <h2>Образование</h2>
       <div class="company">
         <h3>Магистр информатики и вычислительной техники</h3>
