@@ -37,10 +37,10 @@ body {
     padding-right: 30px;
 }
 
-.cv-right .company + .company {
-  margin-top: 1.6rem;
-  padding-top: 1.6rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+.cv-right .company+.company {
+    margin-top: 1.6rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .cv-right {
@@ -202,78 +202,96 @@ a:focus-visible {
 
 /* 1. Define the physical paper size and margins */
 @page {
-  size: A4;
-  margin: 12mm;
+    size: A4;
+    margin: 12mm;
 }
 
 /* 2. Base Print Rules (Apply to both orientations) */
 @media print {
-  .print-btn {
-    display: none !important;
-  }
-  body {
-    background: white !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .cv-container {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  a {
-    color: #333 !important;
-    text-decoration: underline !important;
-    border-bottom: none !important;
-  }
-  .company {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+    .print-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .cv-container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    a {
+        color: #333 !important;
+        text-decoration: underline !important;
+        border-bottom: none !important;
+    }
+
+    .company {
+        page-break-inside: auto;
+    }
+
+    .company h3 {
+        page-break-after: avoid;
+        break-after: avoid-page;
+    }
+
+    .company li {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
 
 /* 3. PORTRAIT: Stack them, Main content first */
 @media print and (orientation: portrait) {
-  .cv-container {
-    flex-direction: column !important;
-  }
-  .cv-right {
-    order: 1 !important;
-    width: 100% !important;
-    padding-left: 0 !important;
-  }
-  .cv-left {
-    order: 2 !important;
-    width: 100% !important;
-    border-right: none !important;
-    border-top: 2px solid #e0e0e0 !important;
-    padding-right: 0 !important;
-    padding-top: 15px !important;
-    margin-top: 15px !important;
-  }
+    .cv-container {
+        flex-direction: column !important;
+    }
+
+    .cv-right {
+        order: 1 !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+
+    .cv-left {
+        order: 2 !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-top: 2px solid #e0e0e0 !important;
+        padding-right: 0 !important;
+        padding-top: 15px !important;
+        margin-top: 15px !important;
+    }
 }
 
 /* 4. LANDSCAPE (Album): Side-by-side, 30/70 split */
 @media print and (orientation: landscape) {
-  .cv-container {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    width: 100% !important;
-  }
-  .cv-left {
-    flex: 0 0 30% !important;
-    width: 30% !important;
-    border-right: 2px solid #e0e0e0 !important;
-    padding-right: 15px !important;
-  }
-  .cv-right {
-    flex: 1 !important;
-    width: 70% !important;
-    padding-left: 15px !important;
-  }
+    .cv-container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+    }
+
+    .cv-left {
+        flex: 0 0 30% !important;
+        width: 30% !important;
+        border-right: 2px solid #e0e0e0 !important;
+        padding-right: 15px !important;
+    }
+
+    .cv-right {
+        flex: 1 !important;
+        width: 70% !important;
+        padding-left: 15px !important;
+    }
 }
