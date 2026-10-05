@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main # The script will run when you push to the main branch
+    tags:
+      - 'v*'
 
 permissions:
   contents: write # Allow the bot to write the generated HTML back to the repository
